@@ -8,14 +8,18 @@
     <!-- Right Side -->
     <div>
       <button><v-icon name="bi-question-circle" scale="1.0" fill="rgb(42, 37, 37)"/></button>
-      <button><v-icon name="co-cart" scale="1.0" fill="rgb(42, 37, 37)"/></button>
+      <button>
+        <RouterLink to="/cart">
+          <v-icon name="co-cart" scale="1.0" fill="rgb(42, 37, 37)"/>
+        </RouterLink>
+      </button>
       <button class="login">Login</button>
     </div>
   </div>
 </template>
 
-<style>
 
+<style>
 button {
   margin-right: 5px;
   border: 0;
