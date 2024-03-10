@@ -1,13 +1,13 @@
 <template>
     <div class="main">
-        <form class="login-container">
+        <form class="login-container" @submit.prevent="handleSubmit">
             <span class="text">Username:</span>
             <div class="input-container">
-            <input type="text"/>
+            <input type="text" v-model="data.username"/>
             </div>
             <span class="text">Password:</span>
             <div class="input-container">
-                <input type="password"/>
+                <input type="password" v-model="data.password"/>
             </div>
             <div class="action-buttons">
             <button type="submit" class="login login-main">Login</button>
@@ -17,6 +17,25 @@
         </form>
     </div>
 </template>
+
+<script lang="ts">
+import {defineComponent} from 'vue';
+export default defineComponent({
+    data() {
+        return {
+            data: {
+                username: '',
+                password: '',
+            },
+        };
+    },
+    methods: {
+        handleSubmit() { 
+            console.log(this.data);
+        },
+    },
+});
+</script>
 
 <style>
 .text{
