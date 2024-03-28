@@ -2,11 +2,11 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import { OhVueIcon, addIcons } from 'oh-vue-icons'
-import { CoCart, BiQuestionCircle, FaAllergies } from "oh-vue-icons/icons";
+import { CoCart, BiQuestionCircle, FaAllergies, BiArrowLeft } from "oh-vue-icons/icons";
 import './assets/main.css'
 import router from './router'
 
-addIcons(CoCart, BiQuestionCircle, FaAllergies);
+addIcons(CoCart, BiQuestionCircle, FaAllergies, BiArrowLeft);
 
 const app = createApp(App)
 

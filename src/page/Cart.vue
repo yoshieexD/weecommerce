@@ -5,6 +5,8 @@ import CartList from '@/components/cart/CartList.vue';
 <template>
   <main>
     <Header/>
-    <CartList/>
+    <div style="display: flex; justify-content: center; align-items: center; height: 70vh;">
+      <CartList />
+    </div>
   </main>
 </template>
