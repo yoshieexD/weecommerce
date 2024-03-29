@@ -1,16 +1,19 @@
-
 <template>
   <div class="header">
     <!-- Logo Side -->
     <button>
-        <v-icon name="fa-allergies" scale="1.5" fill="black" animation="float" />
+      <v-icon name="fa-allergies" scale="1.5" fill="black" animation="float" />
     </button>
     <!-- Right Side -->
     <div>
-      <button><v-icon name="bi-question-circle" scale="1.0" fill="rgb(42, 37, 37)"/></button>
+      <button>
+        <RouterLink to="/about">
+          <v-icon name="bi-question-circle" scale="1.0" fill="rgb(42, 37, 37)" />
+        </RouterLink>
+      </button>
       <button>
         <RouterLink to="/cart">
-          <v-icon name="co-cart" scale="1.0" fill="rgb(42, 37, 37)"/>
+          <v-icon name="co-cart" scale="1.0" fill="rgb(42, 37, 37)" />
         </RouterLink>
       </button>
       <button class="login">Login</button>
