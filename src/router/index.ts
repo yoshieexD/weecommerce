@@ -33,6 +33,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from) => {
-  document.title = to.meta?.title ?? 'Weecommerce'
-})
+  document.title = (typeof to.meta?.title === 'string') ? to.meta.title : 'Weecommerce';
+});
+
 export default router
