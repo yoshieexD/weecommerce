@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/page/Home.vue';
 import Cart from '@/page/Cart.vue';
 import About from '@/page/About.vue';
+import Auth from '@/page/Auth.vue';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -12,6 +13,23 @@ const router = createRouter({
       meta: {
         title: 'Weecommerce - Home'
       }
+    },
+    {
+      path: '/auth/login',
+      name: 'Login',
+      component: Auth,
+      meta: {
+        title: 'Weecommerce - Login'
+      },
+    },
+    {
+      path: '/auth/register',
+      name: 'Register',
+      component: Auth,
+      meta: {
+        title: 'Weecommerce - Register'
+      },
+
     },
     {
       path: '/cart',
@@ -28,6 +46,10 @@ const router = createRouter({
       meta: {
         title: 'Weecommerce - About'
       }
+    },
+    {
+      path: '/auth',
+      redirect: '/auth/login'
     }
   ]
 })

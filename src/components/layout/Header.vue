@@ -16,7 +16,9 @@
           <v-icon name="co-cart" scale="1.0" fill="rgb(42, 37, 37)" />
         </RouterLink>
       </button>
-      <button class="login">Login</button>
+      <router-link to="/auth/login">
+        <button class="login">Login</button>
+      </router-link>
     </div>
   </div>
 </template>

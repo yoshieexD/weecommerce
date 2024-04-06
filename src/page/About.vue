@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import Header from '@/components/layout/Header.vue';
-
+import Accordion from '@/components/about/Accordion.vue';
 </script>
 <template>
   <Header />
-  <h3>Collab for the week</h3>
+  <Accordion />
 </template>
