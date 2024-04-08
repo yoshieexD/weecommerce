@@ -31,24 +31,25 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue';
+export default defineComponent({
     data() {
         return {
-            isOpen: [false, false, false],
-            arrow: ['right', 'down']
+            isOpen: [false, false, false] as boolean[],
+            arrow: ['right', 'down'] as string[]
         };
     },
     methods: {
-        toggleAccordion(index) {
+        toggleAccordion(index: number): void {
             this.isOpen[index] = !this.isOpen[index];
         },
     },
     computed: {
-        arrowDirection() {
-            return index => this.isOpen[index] ? 'bi-arrow-down-short' : 'bi-arrow-right-short';
+        arrowDirection(): (index: number) => string {
+            return (index: number) => this.isOpen[index] ? 'bi-arrow-down-short' : 'bi-arrow-right-short';
         }
     }
-};
+});
 </script>
 
 <style>
