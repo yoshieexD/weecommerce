@@ -6,7 +6,7 @@
         <div v-if="isOpen[1]">
             <p class="accordion-content">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
+                dolore magna aliqua.test
             </p>
         </div>
         <button @click="toggleAccordion(2)" class="accordion-title">Title 2
